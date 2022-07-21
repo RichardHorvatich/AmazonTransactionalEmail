@@ -28,7 +28,7 @@
         .wrapper {
             width: 100%;
             table-layout: fixed;
-            background-color: rgb(175, 175, 175);
+            background-color: rgb(255, 255, 255);
             padding-bottom: 60px;
             
         }
@@ -41,7 +41,7 @@
             border-spacing: 0;
             font-family: 'Roboto', sans-serif;
             color: black; 
-            box-shadow: 1px 4px 4px #6d6d6c;
+            
         }
 
         a{
@@ -61,6 +61,11 @@
             display: inline-block;
             vertical-align: top;
             text-align: center;   
+        }
+
+        .logo2{
+            position: relative;
+            left: 50px;
         }
 
         hr{
@@ -95,15 +100,51 @@
             font-weight: bold;
             font-family: 'Roboto', sans-serif;
             margin-left: 15px;
+            margin-top: 15px;
+        }
+
+        .column3{
+            float:left;
+            
         }
 
         .column2{
-            float: right;
-            position: relative;
-            bottom: 85px;
-            right: 60px;
+            float: left;
+            padding-left: 70px;
         }
 
+        .arrive{
+            padding-left: 10px;
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 0;
+            
+        }
+
+        .wed{
+            padding-left: 10px;
+            color: rgb(19, 173, 19);
+            padding-bottom: 5px;
+            font-family: 'Roboto', sans-serif;
+            
+        }
+        .small{
+            font-size: 12px;
+        }
+
+        .smallest{
+            font-size: 10px;
+        }
+
+        .med{
+            font-size: 11px;
+        }
+
+        .total{
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        
 
         .two-col{
             display: inline-block;
@@ -113,6 +154,60 @@
             text-decoration: none;
         }
 
+        @media (max-width: 600px){
+            .column .img2{
+                position: relative;
+                right: 50px;
+            }
+
+            hr{
+                width: 91%;
+            }
+
+            .column2{
+                font-size: 10px;
+            }
+
+            
+            .button{
+                font-size: 12px;
+                padding: 10px 10px;
+            }
+
+            .arrive{
+                font-size: 12px;
+            }
+
+            
+        }
+
+        @media(max-width: 490px){
+            
+
+            .logo2{
+                
+            }
+            .arrive{
+                padding-left: 140px;
+                
+            }
+            .wed{
+                
+                padding-left: 90px;
+            }
+
+            .button{
+                margin-left: 100px;
+            }
+            .column2{
+                padding-top: 15px;
+                padding-left: 105px;
+            }
+            
+        }
+
+        
+
             
 
         </style>
@@ -120,7 +215,7 @@
     <body>
 
         <div class="wrapper">
-            <table class="main" width="100%" height="100%">
+            <table class="main" width="100%" >
     
                 <!--Top Border-->
                     <tr>
@@ -130,11 +225,11 @@
                 
                 <!--Logo-->
     
-                <tr>
+                <tr width="100%">
                     <td style="padding: 5px 0 4px;">
                         <table width="100%">
                             <tr>
-                                <td class="two-columns" height="70px;">
+                                <td class="two-columns" height="70px;" width="100%">
     
                                     <table class="column">
                                         <tr>
@@ -147,8 +242,8 @@
 
                                     <table class="column">
                                         <tr>
-                                            <td class="logo" style="padding: .1px 75px;">
-                                                <a href="#"><img src="Assest\Order Confirmation1.jpg"></a>
+                                            <td class="logo2" style="padding: .1px 5px;">
+                                                <a href="#" class="img2"><img src="Assest\Order Confirmation1.jpg" width="145" height="50"></a>
                                             </td>
                                         </tr>
                                     </table>
@@ -183,22 +278,25 @@
 
                 <!---Pricing, Total, Shipping, View order button-->
 
-                <tr>
-                    <td>
-                        <div style="background-color: #EFEFEF; margin-left: 20px; margin-right: 20px; height: 300px; border-top: 3px solid #D1D1D1;">
-                        <p style="font-family: 'Roboto', sans-serif; padding-left: 15px; padding-top: 15px; ">Arriving</p>
-                        <p style="color: green; font-weight: bold; position: relative; bottom: 17px; padding-left: 15px; ">Wednesday, August 4</p>
+                <tr >
+                    <td >
+                        <div  style="background-color: #EFEFEF; margin-left: 20px; margin-right: 20px; height: 320px; border-top: 3px solid #D1D1D1;">
+                        <div class="column3">
+                        <p class="arrive">Arriving:</p>
+                        <p class="wed">Wednesday, August 4</p>
                         <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=GENAFPTNLHV7ZACW" class="button">View or manage order</a>
-                            <div class="column2">
-                                <p>Ship to:</p>
-                                <p style="font-weight: bold; font-family: 'Roboto', sans-serif; position: relative; bottom: 15px;">Address Confidential</p>
-                                <p style="font-size: 13px; font-family: 'Roboto', sans-serif; position: relative; bottom: 30px;">Recipient not displayed.</p>
-                                <p style=" font-size: 18px;font-weight: bold; font-family: 'Roboto', sans-serif; position: relative; bottom: 30px;"><span class="material-symbols-outlined">
+                        </div>
+
+                        <div class="column2">
+                            <p class="small">Ship to:</p>
+                            <p class="small">Address Confidential</p>
+                            <p class="smallest">Recipient not displayed.</p>
+                            <p><span class="material-symbols-outlined">
                                     redeem
                                     </span>This is a gift order</p>
-                                <p style="font-size: 13px; font-weight: bold; font-family: 'Roboto', sans-serif; position: relative; bottom: 30px;">Total before tax: <span style="padding-left: 60px;">$19.81</span></p>
-                                <p style="font-size: 13px; font-weight: bold; font-family: 'Roboto', sans-serif; position: relative; bottom: 25px;">Estimated Tax: <span style="padding-left: 73px;">$1.89</span></p>
-                                <p style="font-weight: bold; font-size: 15px; font-family: 'Roboto', sans-serif;">Order Total: <span style="padding-left: 68px;">$21.70</span></p>
+                            <p class="med">Total before tax: <span style="padding-left: 82px;">$19.81</span></p>
+                            <p class="med">Estimated Tax: <span style="padding-left: 93px;">$1.89</span></p>
+                            <p class="total">Order Total: <span style="padding-left: 78px;">$21.70</span></p>
                             </div>
                         </div> 
                     </td>
